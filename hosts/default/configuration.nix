@@ -97,8 +97,9 @@
 
   #drivers
   # Enable OpenGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -154,6 +155,11 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Install steam
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -177,7 +183,13 @@
 	git
 	betterdiscordctl
 	fastfetch
+	mangohud
+	lutris
+	bottles
   ];
+
+  #gamemode
+  programs.gamemode.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
