@@ -137,6 +137,16 @@
   };
 };
 
+  # Stylix options
+  stylix.enable = true;
+
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+
+  stylix.image = ../../wallpapers/wallhaven-x6mxll.png;
+
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.name = "Bibata-Modern-Ice";
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -152,6 +162,9 @@
 	mangohud
 	lutris
 	bottles
+	neovim
+	htop
+	btop
   ];
 
   #gamemode
