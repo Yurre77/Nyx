@@ -129,7 +129,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #Home manager
   home-manager = {
+  backupFileExtension = "hm-backup";
   # also pass inputs to home-manager modules
   extraSpecialArgs = {inherit inputs;};
   users = {
