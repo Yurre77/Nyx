@@ -69,9 +69,10 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
+  # Enable the Desktop Environments.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -140,14 +141,18 @@
 };
 
   # Stylix options
-  stylix.enable = true;
+  stylix{
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    image = ../../wallpapers/wallhaven-x6mxll.png;
+    polarity = "dark";
+    opacity.terminal = 0.7;
 
-  stylix.image = ../../wallpapers/wallhaven-x6mxll.png;
-
-  stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.name = "Bibata-Modern-Ice";
+    cursor.package = pkgs.bibata-cursors;
+    cursor.name = "Bibata-Modern-Ice";
+    cursor.size = 24;
+  }
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
