@@ -152,7 +152,7 @@
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
     cursor.size = 24;
-  }
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
