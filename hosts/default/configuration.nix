@@ -132,7 +132,7 @@
 
   #Home manager
   home-manager = {
-  backupFileExtension = "hm-backup";
+  backupFileExtension = "backup";
   # also pass inputs to home-manager modules
   extraSpecialArgs = {inherit inputs;};
   users = {
